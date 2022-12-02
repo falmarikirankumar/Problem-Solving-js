@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Problem Solving</title>
+  </head>
+  <body>
+    <h1 align="center">
+      JavaScript Questions
+      <br />
+      Problem Solving
+    </h1>
+    <div class="box">
+      <h2>1. Find the Smaller Angle.</h2>
+      <pre>
+    var Minimal_Angle = (h, m) => {
+    let hAngle=((h*360)/12+(m*360)/(12*60))
+    let mAngle=((m*360)/60)
+    let angle=Math.abs(hAngle-mAngle)
+    if(angle>180){
+        angle=360-angle
+    }
+    return angle
+    };</pre
+      >
+    </div>
+
+    <div class="box">
+      <h2>2. Check whether the year is Leap year or not.</h2>
+      <pre>
+    var Check_Leap = (year) => {
+    if((year % 4 ===0) && (year % 100 !== 0) || (year % 400 ===0)){
+    return "Leap Year"
+    }
+    else{
+    return "Non Leap Year"
+    }
+    };</pre
+      >
+    </div>
+
+    <div class="box">
+      <h2>3. Perfect Number Check.</h2>
+      <pre>
+    var Perfect_Check = (N) => {
+    sum = 1;
+    if(N===1){
+        return "YES"
+    }
+    else if(N%2===1){
+        return "NO"
+    }
+    else{
+        
+        for(let i=2;i*i<=N;i++){
+        if(N%i===0){
+            sum += i+N/i
+        }
+        }
+        
+        return sum===N?"YES":"NO"
+    }
+    };</pre
+      >
+    </div>
+
+    <div class="box">
+      <h2>4. Reverse a Number.</h2>
+      <pre>
+    var Reverse_Number = (N) => {
+    N=N+""
+    let rev = N.split("").reverse().join("")
+    return parseInt(rev)
+    };</pre
+      >
+    </div>
+
+    <div class="box">
+      <h2>5. Substring Check.</h2>
+      <pre>
+    var Substring_Check = (S1, S2) => {
+    const arr = S1.split(" ")
+    for(let i=0;i< arr.length;i++){
+        if(arr[i]===S2){
+        return "YES"
+        }
+    }
+    return "NO"
+    };</pre
+      >
+    </div>
+  </body>
+</html>
